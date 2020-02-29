@@ -13,7 +13,13 @@ RUN \
  echo "**** install packages ****" && \
  apk add --no-cache --upgrade && \
  apk add --no-cache \
+	g++ \
+	gcc \
+	python2-dev \
 	nodejs && \
+ echo "**** install pip packages ****" && \
+ pip install --no-cache-dir -U \
+    pycrypto && \
  echo "**** clean up ****" && \
  rm -rf \
 	/root/.cache \
