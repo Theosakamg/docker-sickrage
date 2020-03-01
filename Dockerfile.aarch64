@@ -27,7 +27,8 @@ RUN \
 
 RUN \
  echo "**** install app ****" && \
- git clone --depth=1 -b feature/ddlprovider https://github.com/Theosakamg/SickChill.git /app/sickchill
+ git clone --depth=1 -b feature/ddlprovider https://github.com/Theosakamg/SickChill.git /app/sickchill && \
+ rm -rf /app/sickchill/.git
 
 # copy local files
 COPY root/ /
